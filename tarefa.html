@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameZone</title>
+
+<style>
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+
+nav {
+    background: black;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: red;
+}
+
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    color: red;
+    font-size: 40px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+
+.jogo {
+    background: #1e1e1e;
+    width: 260px;
+    margin: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.jogo.ativo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.jogo:hover {
+    transform: scale(1.05);
+}
+
+.jogo img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.jogo h2 {
+    color: red;
+}
+
+.jogo p {
+    padding: 10px;
+}
+
+
+.botao {
+    margin: 10px;
+    padding: 8px 15px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botao:hover {
+    background: darkred;
+}
+
+
+.extra {
+    display: none;
+}
+
+.extra img {
+    width: 70px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    margin-top: 30px;
+}
+
+.extra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.extra img {
+    width: 150px;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#jogos">Jogos</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+
+<header id="home">
+    <h1>🎮 GameZone</h1>
+    <p>Os melhores jogos da atualidade</p>
+</header>
+
+
+<div class="container" id="jogos">
+
+    <div class="jogo">
+        <img src="C:\Users\aluno\Documents\MARIO JR\imagem\fortnite.jpg">
+        <h2>Fortnite</h2>
+        <p>Fortnite é um jogo cheio de ação onde 100 jogadores lutam para sobreviver em uma ilha. Além de atirar,
+         você pode construir estruturas para se proteger e atacar. Com eventos ao vivo e atualizações constantes,
+          o jogo sempre traz novidades e mantém os jogadores viciados.</p>
+        <button class="botao" onclick="toggle('f')">Ver mais</button>
+        <div class="extra" id="f">
+            <img src="C:\Users\aluno\Documents\MARIO JR\imagem\fort2.webp">
+            <p>Essas são Algumas das Armas que compoem o jogo</p>
+
+            <a href="https://www.fortnite.com" target="_blank" class="link-jogo">Fortnite</a>
+
+        </div>
+    </div>
+
+    <div class="jogo">
+        <img src="C:\Users\aluno\Documents\MARIO JR\imagem\minecraft.avif">
+        <h2>Minecraft</h2>
+        <p>Minecraft é um jogo onde a criatividade não tem limites. 
+        Em um mundo feito de blocos, você pode construir qualquer coisa, explorar cavernas,
+         sobreviver a monstros ou simplesmente criar seu próprio universo do jeito que quiser.</p>
+        <button class="botao" onclick="toggle('m')">Ver mais</button>
+        <div class="extra" id="m">
+            <img src="C:\Users\aluno\Documents\MARIO JR\imagem\minecraft2.webp">
+            <p>No Minecraft Você é Livre para Fazer oque Você quiser</p>
+            <img src="C:\Users\aluno\Documents\MARIO JR\imagem\mine3.webp">
+            <p>Dentro do Game é Possivel Achar Algumas Estruturas Como Essas</p>
+            <img src="C:\Users\aluno\Documents\MARIO JR\imagem\mine4.jpg">
+            <p>E Também é Possivel Encontrar Animais ou Mobs,
+            Alguns Podem te Atacar e Outros são Inofencivos e Você Pode Adotalos</p>
+
+            <a href="https://www.minecraft.net" target="_blank" class="link-jogo">Minecraft</a>
+
+        </div>
+    </div>
+
+    <div class="jogo">
+        <img src="C:\Users\aluno\Documents\MARIO JR\imagem\rocketleague.jpeg">
+        <h2>Rocket League</h2>
+        <p>Rocket League é como um futebol totalmente diferente: você joga com carros! 
+        O objetivo é fazer gols usando veículos super rápidos e cheios de manobras. É divertido,
+         competitivo e exige muita habilidade e trabalho em equipe.</p>
+        <button class="botao" onclick="toggle('r')">Ver mais</button>
+        <div class="extra" id="r">
+            <img src="C:\Users\aluno\Documents\MARIO JR\imagem\carro1.jpg">
+            <p>Nesse Jogo além de Diversão tamém é posssivel Conquistar 
+            coisas e uma Delas são outros Carros</p>
+            <img src="C:\Users\aluno\Documents\MARIO JR\imagem\rockt2.jpg">
+            <p>Além disso é possivel Jogar Partidas Aonde Podemos elevar o Nivel,
+             apenas ganhando Pontos e Subindo de Patente</p>
+
+             <a href="https://www.rocketleague.com" target="_blank" class="link-jogo">Rocket League</a>
+             
+        </div>
+    </div>
+
+    <div class="jogo">
+        <img src="C:\Users\aluno\Documents\MARIO JR\imagem\callofduty.webp">
+        <h2>Call of Duty</h2>
+        <p>Um dos jogos de tiro mais famosos do mundo. Oferece combates realistas, modos online competitivos e campanhas cheias de ação.
+         Ideal para quem gosta de estratégia, reflexos rápidos e adrenalina.</p>
+        <button class="botao" onclick="toggle('cod')">Ver mais</button>
+        <div class="extra" id="cod">
+            <img src="C:\Users\aluno\Documents\MARIO JR\imagem\call5.webp">
+            <p>Nesse jogo Podemos evoluir e Conquistar novas coisas
+             além de Pode se Divertir com os Seus Amigos</p>
+
+             <a href="https://www.callofduty.com" target="_blank" class="link-jogo">Call of Duty</a>
+
+        </div>
+    </div>
+
+    <div class="jogo">
+        <img src="C:\Users\aluno\Documents\MARIO JR\imagem\freefire.jpg">
+        <h2>Free Fire</h2>
+        <p>Um battle royale feito especialmente para celular, com partidas rápidas e intensas.
+         Cada jogador escolhe personagens com habilidades únicas, o que muda totalmente a forma de jogar. 
+         Fácil de aprender e difícil de dominar.</p>
+        <button class="botao" onclick="toggle('ff')">Ver mais</button>
+        <div class="extra" id="ff">
+            <img src="C:\Users\aluno\Documents\MARIO JR\imagem\fff.webp">
+            um jogo Multiplayer Aonde tem Grande Variedade de modos
+            Para Você e seus Colegas se Juntarem e Formarem um Time
+            <img src="C:\Users\aluno\Documents\MARIO JR\imagem\ff2.jpg">
+            <p>Esses são os Mapas Aonde o Jogo Realmente Acontece e é Aqui Que Você vai em Busca de Ganhar as Partidas</p>
+
+            <a href="https://ff.garena.com" target="_blank" class="link-jogo">Free Fire</a>
+
+        </div>
+    </div>
+
+</div>
+
+<style>
+.link-jogo {
+    text-decoration: underline dotted;
+    color: #00ffcc;
+    font-weight: bold;
+}
+</style>
+
+<footer id="contato">
+    <p>© 2026 - Apresentação Escolar</p>
+    <p>Feito por Mario JR 🚀</p>
+</footer>
+
+<script>
+
+
+function toggle(id) {
+    var el = document.getElementById(id);
+    el.style.display = el.style.display === "block" ? "none" : "block";
+}
+
+
+const jogos = document.querySelectorAll('.jogo');
+
+window.addEventListener('scroll', () => {
+    jogos.forEach(jogo => {
+        const pos = jogo.getBoundingClientRect().top;
+        if (pos < window.innerHeight - 50) {
+            jogo.classList.add('ativo');
+        }
+    });
+});
+
+</script>
+
+
+
+</body>
+</html>
